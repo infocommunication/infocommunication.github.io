@@ -1,4 +1,4 @@
-import { VNS_panel, EL_panel} from './hp_panel.js';
+import { VNS_panel, EL_panel } from './hp_panel.js';
 import { MNav, Collapse_Btn } from './hp_mobileNav.js';
 import { init_card_display } from './hp_middle.js';
 import { VideoData_Card } from './video_dataset.js';
@@ -7,9 +7,9 @@ import { downloads_loading } from './downloads.js';
 import { StudyMaterial_Card } from './study_material.js';
 
 const VISITED_PAGE_ARR = [];
-const VISIT_PAGE = function (page_name = "", callback) {
-    if(page_name.length <= 0) {
-        return ;
+const VISIT_PAGE = function(page_name = "", callback) {
+    if (page_name.length <= 0) {
+        return;
     }
     VISITED_PAGE_ARR.push(page_name);
     callback();
@@ -25,17 +25,17 @@ const VISIT_PAGE = function (page_name = "", callback) {
 
 export const vns_method_to_btn_name = str => {
     str = str || "";
-    if(typeof str !== "string") return str;
+    if (typeof str !== "string") return str;
     return str.substring(0, 1).toUpperCase() + str.substring(1);
 };
 
-window.onload = function () {
+window.onload = function() {
     // 定位到tab
     VISIT_PAGE("home", openHomepage_ex);
 
 
 
-    
+
     // openVideoDataset();
     // openDownloads();
     // openAbout();
@@ -43,38 +43,38 @@ window.onload = function () {
     // setTimeout(() => 
     //     confirm("    目前 \[Homepage页面\] 正处于在结构整理与重建期，目前卡片信息除新增GIF文件以外已经全部导入。交互功能除GIF放大模态框功能外已全部开启。\n\n注：卡片和筛选栏icon图片将在 本周末 统一调整位置后上传，届时将向官网迁移全部内容，其他视觉和交互优化将会在下周陆续完成。 \n\n    2020\/12\/23")
     //     , 2400);
-    
+
     // 搜索框重新绑定
-    
+
     // 导航栏事件绑定
     document.querySelectorAll(".navbar-item").forEach((tab, i, nodes) => {
         let tab_name = tab.getAttribute("name");
         let callback;
         tab.onclick = function() {
             navRelocation(tab_name);
-            if(tab_name === "home") {
+            if (tab_name === "home") {
                 callback = openHomepage_ex;
             }
-            if(tab_name === "StudyMaterial") {
+            if (tab_name === "StudyMaterial") {
                 callback = openStudyMaterial;
             }
-            
-            if(tab_name === "gallery") {
+
+            if (tab_name === "gallery") {
                 // callback = openVideoDataset;
                 callback = openGalleryDataset;
             }
 
-            if(tab_name === "about") {
+            if (tab_name === "about") {
                 callback = openAbout;
             }
-            if(tab_name === "downloads") {
+            if (tab_name === "downloads") {
                 callback = openDownloads;
             }
 
             VISIT_PAGE(tab_name, callback);
         };
     });
-    
+
 }
 
 function navRelocation(name = "") {
@@ -82,12 +82,12 @@ function navRelocation(name = "") {
     // console.log(name + " tab clicked.");
 
     document.querySelectorAll(".navbar-item").forEach((tab, i, nodes) => {
-        if(tab.getAttribute("name") === name) {
-            if(!tab.classList.contains("active")) {
+        if (tab.getAttribute("name") === name) {
+            if (!tab.classList.contains("active")) {
                 tab.classList.add("active");
             }
         } else {
-            if(tab.classList.contains("active")) {
+            if (tab.classList.contains("active")) {
                 tab.classList.remove("active");
             }
         }
@@ -111,12 +111,12 @@ function openHomepage_ex() {
         success: function(res) {
             document.querySelector("main").innerHTML = res;
             Homepage_ex_loading();
- 
+
         }
     });
 
 
-   
+
 }
 
 
@@ -217,23 +217,23 @@ function openAbout() {
 
 // 左侧导航顺序
 function Homepage_ex_loading() {
-    
+
     const mobile_nav_node = document.querySelector(".mobile-nav-scrollSpy");
     const sidebar_node = document.getElementById("sidebar-ex");
     const card_display_node = document.getElementById("card-display-ex");
 
     const vns_extraNode_html = `<span class="scrollSpy-btn-stop"></span>`;
     const vns_extraClass_toA_arr = ["${VNS_tag}"];
-    const vns_extraAttribute_toA = {href: "#${VNS_tag}"};
+    const vns_extraAttribute_toA = { href: "#${VNS_tag}" };
     const el_extraClass_toA_arr = ["el-${EL_tag}", "active"];
     const chart_extraClass_toA_arr = ["chart-${Chart_tag}", "active"];
     const mn_extraClass_toA_arr = ["${VNS_tag}"];
-    const mn_extraAttribute_toA = {"data-target": "#${VNS_tag}"};
+    const mn_extraAttribute_toA = { "data-target": "#${VNS_tag}" };
 
     MNav.fillContainer(mobile_nav_node, mn_extraClass_toA_arr, mn_extraAttribute_toA, vns_method_to_btn_name);
 
     VNS_panel.appendTo(sidebar_node, vns_extraNode_html, vns_extraClass_toA_arr, vns_extraAttribute_toA, vns_method_to_btn_name);
-    
+
     // Chart_panel.appendTo(sidebar_node, "", chart_extraClass_toA_arr, {});
     EL_panel.appendTo(sidebar_node, "", el_extraClass_toA_arr, {});
 
@@ -243,23 +243,23 @@ function Homepage_ex_loading() {
     searchBox_EventListener(card_display_node);
     modal_EventListener();
 
-    setTimeout (() => {
-    //这里我想通过找到名字为el-Pie-chart的div盒子，然后在这个盒子的后面加上h3标题Chart Types
-    console.log ('新增代码');
+    setTimeout(() => {
+        //这里我想通过找到名字为el-Pie-chart的div盒子，然后在这个盒子的后面加上h3标题Chart Types
+        console.log('新增代码');
 
-    var chart_node = document.getElementsByClassName("sidebar-panel-group");
-    console.log(chart_node);
+        var chart_node = document.getElementsByClassName("sidebar-panel-group");
+        console.log(chart_node);
 
-    var chart_child_node = chart_node[1].childNodes;
-    console.log(chart_child_node);
+        var chart_child_node = chart_node[1].childNodes;
+        console.log(chart_child_node);
 
-    var chart_child_that_node = chart_child_node[2];
-    console.log(chart_child_that_node);
+        var chart_child_that_node = chart_child_node[2];
+        console.log(chart_child_that_node);
 
-    var chart_child_that_node = chart_child_node[3];
-    console.log(chart_child_that_node);
+        var chart_child_that_node = chart_child_node[3];
+        console.log(chart_child_that_node);
 
-    chart_child_that_node.insertAdjacentHTML('afterend', '<h3 class="sidebar-panel-title sidebar-panel-title-editorial">Output</h3>');
+        chart_child_that_node.insertAdjacentHTML('afterend', '<h3 class="sidebar-panel-title sidebar-panel-title-editorial">Output</h3>');
 
     }, 100);
 
@@ -280,31 +280,32 @@ function searchBox_EventListener(card_display_node = new HTMLElement()) {
     }
     document.querySelector(".searchbox-input").onblur = () => {
         let search_text = document.querySelector(".searchbox-input").value;
-        document.querySelector(".searchbox-input").value = search_text ? search_text: "Search";
+        document.querySelector(".searchbox-input").value = search_text ? search_text : "Search";
         // if(!search_text) {
         //     init_card_display(card_display_node);
         //     document.querySelector("input").value = "Search";
         // }
     }
     document.querySelector(".searchbox-input").onkeydown = () => {
-        if(event.keyCode === 13) {
+        if (event.keyCode === 13) {
             let search_text = document.querySelector(".searchbox-input").value;
             init_card_display(card_display_node, search_text);
         }
     }
 }
 
-function modal_EventListener () {
+function modal_EventListener() {
     const modal_content_node = document.querySelector(".modal-content");
     $('#zooming-modal').on('hidden.bs.modal', function() {
         modal_content_node.className = "modal-content";
     });
-    $('.modal-title').tooltip({title: "visit the data video"});
+    $('.modal-title').tooltip({ title: "visit the data video" });
 }
 
 
 /* video dataset page init method */
 const video_dataset_url = "./assets/json/video_dataset.json";
+
 function videoDataset_loading() {
     const video_deck_node = document.querySelector(".video-deck");
     const empty_deck_node = document.querySelector("#empty-deck-single");
@@ -316,7 +317,11 @@ function videoDataset_loading() {
         $.each(json, (i, video_item) => {
             // create card object
             let {
-                id, video_title, year, video_source, video_link
+                id,
+                video_title,
+                year,
+                video_source,
+                video_link
             } = video_item;
 
             let vd_object = new VideoData_Card(video_item);
@@ -324,12 +329,13 @@ function videoDataset_loading() {
             // insert card object to the deck
             vd_object.appendTo(video_deck_node, empty_deck_node);
 
-            if(i === json.length - 1) {
+            if (i === json.length - 1) {
                 // console.log("All cards were loaded on the page.");
             }
         });
     });
 }
+
 function gallery_loading() {
     const video_deck_node = document.querySelector(".video-deck");
     const empty_deck_node = document.querySelector("#empty-deck-single");
@@ -358,6 +364,7 @@ function gallery_loading() {
 
 
 const studymaterial_url = "./assets/json/study_material.json";
+
 function StudyMaterial_loading() {
     const joy1_deck_node = document.querySelector(".joy-deck1");
     const piece1_deck_node = document.querySelector("#piece1");
@@ -453,7 +460,7 @@ function StudyMaterial_loading() {
     const excitement30_deck_node = document.querySelector(".excitement-deck30");
     const piece30_deck_node = document.querySelector("#piece30");
 
-    
+
 
 
 
@@ -466,140 +473,110 @@ function StudyMaterial_loading() {
         $.each(json, (i, video_item) => {
             // create card object
             let {
-                id, title, year, video_source, video_link, emotion
+                id,
+                title,
+                year,
+                video_source,
+                video_link,
+                emotion
             } = video_item;
 
             if (id <= 4) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(joy1_deck_node, piece1_deck_node);
-            }
-            else if (id <= 8) {
+            } else if (id <= 8) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(joy2_deck_node, piece2_deck_node);
-            }
-            else if (id <= 12) {
+            } else if (id <= 12) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(joy3_deck_node, piece3_deck_node);
-            }
-            else if (id <= 16) {
+            } else if (id <= 16) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(joy4_deck_node, piece4_deck_node);
-            }
-            else if (id <= 20) {
+            } else if (id <= 20) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(joy5_deck_node, piece5_deck_node);
-            }
-            else if (id <= 24) {
+            } else if (id <= 24) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(joy6_deck_node, piece6_deck_node);
-            }
-            else if (id <= 28) {
+            } else if (id <= 28) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(amusement7_deck_node, piece7_deck_node);
-            }
-            else if (id <= 32) {
+            } else if (id <= 32) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(amusement8_deck_node, piece8_deck_node);
-            }
-            else if (id <= 36) {
+            } else if (id <= 36) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(amusement9_deck_node, piece9_deck_node);
-            }
-            else if (id <= 40) {
+            } else if (id <= 40) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(amusement10_deck_node, piece10_deck_node);
-            }
-            else if (id <= 44) {
+            } else if (id <= 44) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(amusement11_deck_node, piece11_deck_node);
-            }
-            else if (id <= 48) {
+            } else if (id <= 48) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(amusement12_deck_node, piece12_deck_node);
-            }
-            
-
-
-            else if (id <= 54) {
+            } else if (id <= 54) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(surprise13_deck_node, piece13_deck_node);
-            }
-            else if (id <= 60) {
+            } else if (id <= 60) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(surprise14_deck_node, piece14_deck_node);
-            }
-            else if (id <= 66) {
+            } else if (id <= 66) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(surprise15_deck_node, piece15_deck_node);
-            }
-            else if (id <= 72) {
+            } else if (id <= 72) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(surprise16_deck_node, piece16_deck_node);
-            }
-            else if (id <= 78) {
+            } else if (id <= 78) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(surprise17_deck_node, piece17_deck_node);
-            }
-            else if (id <= 84) {
+            } else if (id <= 84) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(surprise18_deck_node, piece18_deck_node);
-            }
-
-            else if (id <= 89) {
+            } else if (id <= 89) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(tenderness19_deck_node, piece19_deck_node);
-            }
-            else if (id <= 94) {
+            } else if (id <= 94) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(tenderness20_deck_node, piece20_deck_node);
-            }
-            else if (id <= 99) {
+            } else if (id <= 99) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(tenderness21_deck_node, piece21_deck_node);
-            }
-            else if (id <= 104) {
+            } else if (id <= 104) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(tenderness22_deck_node, piece22_deck_node);
-            }
-            else if (id <= 109) {
+            } else if (id <= 109) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(tenderness23_deck_node, piece23_deck_node);
-            }
-            else if (id <= 114) {
+            } else if (id <= 114) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(tenderness24_deck_node, piece24_deck_node);
-            }
-
-
-            else if (id <= 120) {
+            } else if (id <= 120) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(excitement25_deck_node, piece25_deck_node);
-            }
-            else if (id <= 126) {
+            } else if (id <= 126) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(excitement26_deck_node, piece26_deck_node);
-            }
-            else if (id <= 132) {
+            } else if (id <= 132) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(excitement27_deck_node, piece27_deck_node);
-            }
-            else if (id <= 138) {
+            } else if (id <= 138) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(excitement28_deck_node, piece28_deck_node);
-            }
-            else if (id <= 144) {
+            } else if (id <= 144) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(excitement29_deck_node, piece29_deck_node);
-            }
-            else if (id <= 150) {
+            } else if (id <= 150) {
                 let vd_object = new StudyMaterial_Card(video_item);
                 vd_object.appendTo(excitement30_deck_node, piece30_deck_node);
             }
 
             // insert card object to the deck
-            
 
-            if(i === json.length - 1) {
+
+            if (i === json.length - 1) {
                 // console.log("All cards were loaded on the page.");
             }
         });
@@ -607,4 +584,3 @@ function StudyMaterial_loading() {
 
     // mouse_EventListener();
 }
-
