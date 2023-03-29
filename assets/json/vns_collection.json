@@ -48,10 +48,26 @@
     },
     {
         "VNS_id": 6,
-        "VNS_tag": "Observations",
-        "VNS_clustername": "Observations",
+        "VNS_tag": "C7",
+        "VNS_clustername": "C7 · 111",
         "VNS_color": "#f5c8c0",
         "VNS_desc": "We also derived two additional findings by observing the distribution of the samples in our corpus, including two vertical clusters and the central axis of our framework. The specific definitions of these observations can be seen in our paper.",
-        "VNS_num": 10
+        "VNS_num": 0
+    },
+    {
+        "VNS_id": 7,
+        "VNS_tag": "C8",
+        "VNS_clustername": "C8 · 222",
+        "VNS_color": "#f5c8c0",
+        "VNS_desc": "We also derived two additional findings by observing the distribution of the samples in our corpus, including two vertical clusters and the central axis of our framework. The specific definitions of these observations can be seen in our paper.",
+        "VNS_num": 0
+    },
+    {
+        "VNS_id": 7,
+        "VNS_tag": "C9",
+        "VNS_clustername": "C9 · 333",
+        "VNS_color": "#f5c8c0",
+        "VNS_desc": "We also derived two additional findings by observing the distribution of the samples in our corpus, including two vertical clusters and the central axis of our framework. The specific definitions of these observations can be seen in our paper.",
+        "VNS_num": 0
     }
 ]

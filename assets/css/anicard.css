@@ -142,25 +142,67 @@
     background-color: #F0F9E1;
 }
 
-.vns-Observations,
-.Observations .modal-header,
-.Observations .modal-footer,
-.Observations .mobile-nav-symbol,
-.Observations .scrollSpy-btn-symbol,
-.Observations .reminder-symbol {
-    background-color: #ACACAC !important;
+.vns-C7,
+.C7 .modal-header,
+.C7 .modal-footer,
+.C7 .mobile-nav-symbol,
+.C7 .scrollSpy-btn-symbol,
+.C7 .reminder-symbol {
+    background-color: #B3DE69 !important;
 }
 
-.Observations .front {
-    background: transparent linear-gradient(180deg, #EEEEEE 50%, #FFFFFF 80%) !important;
+.C7 .front {
+    background: transparent linear-gradient(180deg, #F0F9E1 50%, #FFFFFF 80%) !important;
 }
 
-.Observations .card-header {
-    background-color: #D5D5D5;
+.C7 .card-header {
+    background-color: #D8EEB3;
 }
 
-.Observations .story-card-body {
-    background-color: #EEEEEE;
+.C7 .story-card-body {
+    background-color: #F0F9E1;
+}
+
+.vns-C8,
+.C8 .modal-header,
+.C8 .modal-footer,
+.C8 .mobile-nav-symbol,
+.C8 .scrollSpy-btn-symbol,
+.C8 .reminder-symbol {
+    background-color: #B3DE69 !important;
+}
+
+.C8 .front {
+    background: transparent linear-gradient(180deg, #F0F9E1 50%, #FFFFFF 80%) !important;
+}
+
+.C8 .card-header {
+    background-color: #D8EEB3;
+}
+
+.C8 .story-card-body {
+    background-color: #F0F9E1;
+}
+
+.vns-C9,
+.C9 .modal-header,
+.C9 .modal-footer,
+.C9 .mobile-nav-symbol,
+.C9 .scrollSpy-btn-symbol,
+.C9 .reminder-symbol {
+    background-color: #B3DE69 !important;
+}
+
+.C9 .front {
+    background: transparent linear-gradient(180deg, #F0F9E1 50%, #FFFFFF 80%) !important;
+}
+
+.C9 .card-header {
+    background-color: #D8EEB3;
+}
+
+.C9 .story-card-body {
+    background-color: #F0F9E1;
 }
 
 
@@ -1116,18 +1158,6 @@ footer .footer-text {
 
 /*story部分*/
 
-.reminder-content-story {
-    width: 100%;
-    padding-top: 1.25rem;
-    /*padding-bottom: 0.75rem;*/
-    padding-bottom: 0rem;
-    padding-left: 3.625rem;
-    padding-right: 3.625rem;
-    margin: 0;
-    position: relative;
-    z-index: 10;
-}
-
 @media (max-width: 576px) {
     .reminder-content-story {
         /*background-image: url(../image/reminder-mobile-bg.png);*/
@@ -1181,10 +1211,15 @@ footer .footer-text {
 .story-head {
     margin-bottom: 0.25rem;
     font-size: 0;
-    display: flex;
+    /* display: flex; */
     align-items: baseline;
     position: relative;
 }
+
+
+/* .reminder-head {
+    margin-left: 10rem !important;
+} */
 
 @media (max-width: 576px) {
     .reminder-head,
@@ -1202,7 +1237,12 @@ footer .footer-text {
     color: #000000;
 }
 
-@media (max-width: 576px) {
+.reminder-subtitle {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+@media (max-width: 476px) {
     .reminder-title,
     .reminder-sum {
         font-size: 1.125rem;
@@ -1214,7 +1254,7 @@ footer .footer-text {
     display: inline-block;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 476px) {
     .reminder-sum {
         display: none;
     }
