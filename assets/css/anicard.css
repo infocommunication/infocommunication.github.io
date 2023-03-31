@@ -22,19 +22,19 @@
 .C1 .mobile-nav-symbol,
 .C1 .scrollSpy-btn-symbol,
 .C1 .reminder-symbol {
-    background-color: #E6E600 !important;
+    background-color: #a31e2d !important;
 }
 
 .C1 .front {
-    background: transparent linear-gradient(180deg, #FAFACC 50%, #FFFFFF 80%) !important;
+    background: transparent linear-gradient(180deg, #f0dee1 50%, #FFFFFF 80%) !important;
 }
 
 .C1 .card-header {
-    background-color: #F2F27F !important;
+    background-color: #953843 !important;
 }
 
 .C1 .story-card-body {
-    background-color: #FAFACC;
+    background-color: #f0dee1;
 }
 
 .vns-C2,
@@ -43,19 +43,19 @@
 .C2 .mobile-nav-symbol,
 .C2 .scrollSpy-btn-symbol,
 .C2 .reminder-symbol {
-    background-color: #BEBADA !important;
+    background-color: #e7c582 !important;
 }
 
 .C2 .front {
-    background: transparent linear-gradient(180deg, #F2F1F8 50%, #FFFFFF 80%) !important;
+    background: transparent linear-gradient(180deg, #f3e5c8 50%, #FFFFFF 80%) !important;
 }
 
 .C2 .card-header {
-    background-color: #DEDCEC;
+    background-color: #e7c582;
 }
 
 .C2 .story-card-body {
-    background-color: #F2F1F8;
+    background-color: #f3e5c8;
 }
 
 .vns-C3,
@@ -64,19 +64,19 @@
 .C3 .mobile-nav-symbol,
 .C3 .scrollSpy-btn-symbol,
 .C3 .reminder-symbol {
-    background-color: #FB8072 !important;
+    background-color: #6f8f5b !important;
 }
 
 .C3 .front {
-    background: transparent linear-gradient(180deg, #FEE6E3 50%, #FFFFFF 80%) !important;
+    background: transparent linear-gradient(180deg, #dfedd8 50%, #FFFFFF 80%) !important;
 }
 
 .C3 .card-header {
-    background-color: #FDBFB8;
+    background-color: #6f8f5b;
 }
 
 .C3 .story-card-body {
-    background-color: #FEE6E3;
+    background-color: #dfedd8;
 }
 
 .vns-C4,
@@ -85,19 +85,19 @@
 .C4 .mobile-nav-symbol,
 .C4 .scrollSpy-btn-symbol,
 .C4 .reminder-symbol {
-    background-color: #80B1D3 !important;
+    background-color: #524c7b !important;
 }
 
 .C4 .front {
-    background: transparent linear-gradient(180deg, #E6EFF6 50%, #FFFFFF 80%) !important;
+    background: transparent linear-gradient(180deg, #e6e4ef 50%, #FFFFFF 80%) !important;
 }
 
 .C4 .card-header {
-    background-color: #BFD8E9;
+    background-color: #524c7b;
 }
 
 .C4 .story-card-body {
-    background-color: #E6EFF6;
+    background-color: #e6e4ef;
 }
 
 .vns-C5,
@@ -106,19 +106,19 @@
 .C5 .mobile-nav-symbol,
 .C5 .scrollSpy-btn-symbol,
 .C5 .reminder-symbol {
-    background-color: #FDB462 !important;
+    background-color: #ab815c !important;
 }
 
 .C5 .front {
-    background: transparent linear-gradient(180deg, #FFF0DF 50%, #FFFFFF 80%) !important;
+    background: transparent linear-gradient(180deg, #ecdfd4 50%, #FFFFFF 80%) !important;
 }
 
 .C5 .card-header {
-    background-color: #FED9B0;
+    background-color: #ab815c;
 }
 
 .C5 .story-card-body {
-    background-color: #FFF0DF;
+    background-color: #ecdfd4;
 }
 
 .vns-C6,
@@ -127,19 +127,19 @@
 .C6 .mobile-nav-symbol,
 .C6 .scrollSpy-btn-symbol,
 .C6 .reminder-symbol {
-    background-color: #B3DE69 !important;
+    background-color: #d6af00 !important;
 }
 
 .C6 .front {
-    background: transparent linear-gradient(180deg, #F0F9E1 50%, #FFFFFF 80%) !important;
+    background: transparent linear-gradient(180deg, #f8f2db 50%, #FFFFFF 80%) !important;
 }
 
 .C6 .card-header {
-    background-color: #D8EEB3;
+    background-color: #d6af00;
 }
 
 .C6 .story-card-body {
-    background-color: #F0F9E1;
+    background-color: #f8f2db;
 }
 
 .vns-C7,
@@ -148,19 +148,19 @@
 .C7 .mobile-nav-symbol,
 .C7 .scrollSpy-btn-symbol,
 .C7 .reminder-symbol {
-    background-color: #B3DE69 !important;
+    background-color: #0077aa !important;
 }
 
 .C7 .front {
-    background: transparent linear-gradient(180deg, #F0F9E1 50%, #FFFFFF 80%) !important;
+    background: transparent linear-gradient(180deg, #dbebf2 50%, #FFFFFF 80%) !important;
 }
 
 .C7 .card-header {
-    background-color: #D8EEB3;
+    background-color: #0077aa;
 }
 
 .C7 .story-card-body {
-    background-color: #F0F9E1;
+    background-color: #dbebf2;
 }
 
 .vns-C8,
@@ -169,19 +169,19 @@
 .C8 .mobile-nav-symbol,
 .C8 .scrollSpy-btn-symbol,
 .C8 .reminder-symbol {
-    background-color: #B3DE69 !important;
+    background-color: #c26d57 !important;
 }
 
 .C8 .front {
-    background: transparent linear-gradient(180deg, #F0F9E1 50%, #FFFFFF 80%) !important;
+    background: transparent linear-gradient(180deg, #f3e5e2 50%, #FFFFFF 80%) !important;
 }
 
 .C8 .card-header {
-    background-color: #D8EEB3;
+    background-color: #c26d57;
 }
 
 .C8 .story-card-body {
-    background-color: #F0F9E1;
+    background-color: #c26d57;
 }
 
 .vns-C9,
@@ -190,19 +190,19 @@
 .C9 .mobile-nav-symbol,
 .C9 .scrollSpy-btn-symbol,
 .C9 .reminder-symbol {
-    background-color: #B3DE69 !important;
+    background-color: #94cfb9 !important;
 }
 
 .C9 .front {
-    background: transparent linear-gradient(180deg, #F0F9E1 50%, #FFFFFF 80%) !important;
+    background: transparent linear-gradient(180deg, #ebf6f2 50%, #FFFFFF 80%) !important;
 }
 
 .C9 .card-header {
-    background-color: #D8EEB3;
+    background-color: #94cfb9;
 }
 
 .C9 .story-card-body {
-    background-color: #F0F9E1;
+    background-color: #ebf6f2;
 }
 
 
@@ -578,7 +578,7 @@ footer .footer-text {
 
 @media (max-width: 852.5px) {
     .navbar-container .nav-head {
-        background: transparent linear-gradient(90deg, #DEF5CC 0%, #ECF7DE 100%);
+        /* background: transparent linear-gradient(90deg, #DEF5CC 0%, #ECF7DE 100%); */
         /* background-image: url(../image/banner-mobile.png); */
         background-position: bottom right;
         background-size: auto 100%;
@@ -718,7 +718,8 @@ footer .footer-text {
 
 /* 卡片颜色渐变 */
 
-.card-deck-single[name="card_9"] .card-header {
+
+/* .card-deck-single[name="card_9"] .card-header {
     background: transparent linear-gradient(90deg, #F2F27F 0%, #F2F27F 25%, #D5D5D5 75%, #D5D5D5 100%) 0% 0% no-repeat padding-box !important;
 }
 
@@ -736,7 +737,7 @@ footer .footer-text {
 
 .card-deck-single[name="card_55"] .card-header {
     background: transparent linear-gradient(90deg, #D8EEB3 0%, #D8EEB3 25%, #D5D5D5 75%, #D5D5D5 100%) 0% 0% no-repeat padding-box !important;
-}
+} */
 
 
 /* .card-deck-single[name="card_21"] .card-header {
@@ -803,6 +804,9 @@ footer .footer-text {
     background-image: url(../hp_front_preview/front_10_1.png) !important;
 }
 
+
+/* 调图片高度 */
+
 .card-deck .card-frontImg,
 .card-deck .card-imgBox {
     background-image: url(../image/loading.svg);
@@ -821,7 +825,7 @@ footer .footer-text {
     vertical-align: middle;
     margin: 0 auto;
     width: 100%;
-    height: 100%;
+    height: 150%;
     border-radius: 0;
     position: absolute;
 }
@@ -896,7 +900,7 @@ footer .footer-text {
 
 .card-deck .card-footer {
     background: none;
-    padding: 1rem 1rem;
+    padding: 7rem 1em 1rem;
     border-top: 1px solid #DEDEDE;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -904,10 +908,11 @@ footer .footer-text {
     border-bottom-right-radius: 0.375rem;
     display: inline-flex;
     align-content: space-between;
-    height: 3.5rem;
+    height: 11.5rem;
 }
 
-.card-deck .card-footer-num,
+
+/* .card-deck .card-footer-num,
 .card-deck .card-footer a {
     font-size: 1rem;
     font-weight: 600;
@@ -915,6 +920,22 @@ footer .footer-text {
 
 .card-deck .card-footer-num {
     color: #000000;
+} */
+
+.card-deck .card-footer-num {
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: absolute;
+    bottom: 11px;
+    left: 10px;
+}
+
+.card-deck .card-footer-rating {
+    font-size: 0.75rem;
+    font-weight: 400;
+    position: absolute;
+    bottom: 50px;
+    left: 10px;
 }
 
 .card-footer .card-footer-child {
@@ -944,6 +965,28 @@ footer .footer-text {
 
 .card-deck .card-footer-bottom:active {
     background-color: #FFFFFF;
+}
+
+.card-footer-source {
+    font-size: 0.75rem;
+    font-weight: 400;
+    position: absolute;
+    left: 10px;
+}
+
+.card-deck .card-footer-bottom {
+    color: black;
+    font-size: 0.75rem;
+    font-weight: 400;
+    padding: 0.125rem 1rem;
+    background-color: rgb(210, 210, 210);
+    border: 1px solid #a6a6a610;
+    border-radius: 50vh;
+    outline: none;
+    height: 30px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
 
 .card-deck .card-footer a {
@@ -1002,6 +1045,7 @@ footer .footer-text {
     display: flex;
     justify-content: center;
     /* padding-bottom: 0.5rem; */
+    color: white;
 }
 
 .header-text-class {
@@ -1021,7 +1065,7 @@ footer .footer-text {
 
 .card-inner {
     position: relative;
-    height: 28.5rem;
+    height: 33rem;
 }
 
 .card-inner .front,
@@ -1141,6 +1185,7 @@ footer .footer-text {
     margin: 0;
     position: relative;
     z-index: 10;
+    /* background-color: #ffffff; */
 }
 
 @media (max-width: 576px) {

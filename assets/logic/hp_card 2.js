@@ -8,6 +8,7 @@ class Homepage_Card {
         card_id,
         card_title,
         VNS_tag,
+        VNS_clustername,
         VNS_ambiguity,
         EL_tag,
         EL_tag2,
@@ -18,16 +19,11 @@ class Homepage_Card {
         eg_source,
         eg_url,
         eg_year,
-        snapshot,
         eg_category,
         eg_subcategory,
-        rating,
         effective_1,
         effective_2,
         effective_3,
-        ineffective_1,
-        ineffective_2,
-        ineffective_3
     }) {
         this.parameters = {};
         this.parameters = parameters;
@@ -58,11 +54,8 @@ class Homepage_Card {
 
         // back
         let back_nodeList = [
-            card_back_header,
-            //创建卡片背面的图片、身体、脚
-            // this._createCard_backImgBox(),
-            this._createCard_backBody(),
-            this._createCard_footer(0)
+            card_back_header, this._createCard_backImgBox(),
+            this._createCard_backBody(), this._createCard_footer(0)
         ];
         back_nodeList.forEach((node, i, nodeList) => card_back_node.appendChild(node));
 
@@ -109,12 +102,12 @@ class Homepage_Card {
         let title_html = `<div class="header-text-title">${vns_method_to_btn_name(this.parameters["card_title"])}</div>`;
 
         //用el_tag1作为盒子名称
-        let classnewIcon_html = `<div class="header-icon-class ${this.parameters["EL_tag1"].replace(/\s+/g, "-")}"></div>`;
-        let classnew_html = `<div class="header-text-class">${vns_method_to_btn_name(this.parameters["EL_tag1"])}</div>`;
+        //let classnewIcon_html = `<div class="header-icon-class ${this.parameters["EL_tag1"].replace(/\s+/g, "-")}"></div>`;
+        //let classnew_html = `<div class="header-text-class">${vns_method_to_btn_name(this.parameters["EL_tag1"])}</div>`;
 
         //直接用el_tag2作为盒子名称
-        let classIcon_html = `<div class="header-icon-class ${this.parameters["EL_tag2"].replace(/\s+/g, "-")}"></div>`;
-        let class_html = `<div class="header-text-class">${vns_method_to_btn_name(this.parameters["EL_tag2"])}</div>`;
+        //let classIcon_html = `<div class="header-icon-class ${this.parameters["EL_tag2"].replace(/\s+/g, "-")}"></div>`;
+        //let class_html = `<div class="header-text-class">${vns_method_to_btn_name(this.parameters["EL_tag2"])}</div>`;
 
         // else if (this.parameters["VNS_ambiguity"] == 0) {
         //     let classnewIcon_html = `<div class="test"></div>`;
@@ -124,82 +117,100 @@ class Homepage_Card {
 
         card_header_node.classList.add("card-header", `el-${this.parameters["EL_tag1"].replace(/\s+/g, "-")}`);
         header_text_node.classList.add("header-text");
-        //header下面打icon标签
-        // header_classification_node.classList.add("header_classification");
-        // header_symbol_node.classList.add("header-symbol");
+        header_classification_node.classList.add("header_classification");
 
         header_text_node.innerHTML = title_html;
-        card_header_node.appendChild(header_text_node)
 
-
-        // if (this.parameters["VNS_ambiguity"] == 1) {
+        // if (this.parameters["VNS_ambiguity"] == 1){
         //     header_classification_node.innerHTML = classnewIcon_html + classnew_html + classIcon_html + class_html;
-        // } else {
+        // }
+        // else{
         //     header_classification_node.innerHTML = classnewIcon_html + classnew_html;
         // }
 
 
         // console.log (this.parameters["VNS_ambiguity"]);
 
-        // [header_text_node, header_classification_node].forEach((node, i, nodeList) => card_header_node.appendChild(node));
+        [header_text_node, header_classification_node].forEach((node, i, nodeList) => card_header_node.appendChild(node));
         // [header_text_node, header_symbol_node].forEach((node, i, nodeList) => card_header_node.appendChild(node));
         return card_header_node;
     }
 
-    _createCard_frontBody() {
-            let card_body_node = document.createElement("div");
-            // let card_frontBody_titleHtml = "";
-            let card_frontBody_textHtml = "";
-            // let card_body_front_textArray = [
-            //     this.parameters["how"], this.parameters["why"], this.parameters["AVT_tag"]
-            // ];
+    // _createCard_frontBody () {
+    //     let card_body_node = document.createElement("div");
+    //     // let card_frontBody_titleHtml = "";
+    //     let card_frontBody_textHtml = "";
+    //     // let card_body_front_textArray = [
+    //     //     this.parameters["how"], this.parameters["why"], this.parameters["AVT_tag"]
+    //     // ];
 
-            let card_body_front_text = [
-                this.parameters["how"]
-            ];
+    //     let card_body_front_text = [
+    //         this.parameters["how"]
+    //     ];
 
-            card_body_node.classList.add("card-body");
+    //     card_body_node.classList.add("card-body");
 
-            Homepage_Card.card_body_front_titleArray.forEach((title, i, titleList) => {
-                if (card_body_front_textArray[i] === "") {
-                    return;
-                }
-                // card_frontBody_titleHtml = `<div class="card-body-subtitle">${title}</div>`;
-                card_frontBody_textHtml = `<p class="card-body-text">${card_body_front_textArray[i]}</p>`;
-                card_body_node.innerHTML += card_frontBody_textHtml;
-            });
+    //     Homepage_Card.card_body_front_titleArray.forEach((title, i, titleList) => {
+    //         if(card_body_front_textArray[i] === "") {
+    //             return ;
+    //         }
+    //         // card_frontBody_titleHtml = `<div class="card-body-subtitle">${title}</div>`;
+    //         card_frontBody_textHtml = `<p class="card-body-text">${card_body_front_textArray[i]}</p>`;
+    //         card_body_node.innerHTML  += card_frontBody_textHtml; 
+    //     });
 
-            // 原版
-            // Homepage_Card.card_body_front_titleArray.forEach((title, i, titleList) => {
-            //     if(card_body_front_textArray[i] === "") {
-            //         return ;
-            //     }
-            //     card_frontBody_titleHtml = `<div class="card-body-subtitle">${title}</div>`;
-            //     card_frontBody_textHtml = `<p class="card-body-text">${card_body_front_textArray[i]}</p>`;
-            //     card_body_node.innerHTML  += (card_frontBody_titleHtml + card_frontBody_textHtml); 
-            // });
+    //     // 原版
+    //     // Homepage_Card.card_body_front_titleArray.forEach((title, i, titleList) => {
+    //     //     if(card_body_front_textArray[i] === "") {
+    //     //         return ;
+    //     //     }
+    //     //     card_frontBody_titleHtml = `<div class="card-body-subtitle">${title}</div>`;
+    //     //     card_frontBody_textHtml = `<p class="card-body-text">${card_body_front_textArray[i]}</p>`;
+    //     //     card_body_node.innerHTML  += (card_frontBody_titleHtml + card_frontBody_textHtml); 
+    //     // });
 
-            return card_body_node;
-        }
-        /**
-         * front
-         * <div class="card-frontImg">
-         *     <img class="card-img front-gif" src="./assets/image/fail_loading.svg">
-         *     <img class="card-img front-preview" src="./assets/image/loading.svg">
-         * </div> 
-         * */
+    //     return card_body_node;
+    // }
+    /**
+     * front
+     * <div class="card-frontImg">
+     *     <img class="card-img front-gif" src="./assets/image/fail_loading.svg">
+     *     <img class="card-img front-preview" src="./assets/image/loading.svg">
+     * </div> 
+     * */
     _createCard_frontImg() {
         let card_frontImg_node = document.createElement("div");
         var num = this.parameters["card_id"];
-        console.log(this.parameters["card_id"]);
-        var newnum = num % 3;
-        // let front_gif_html = `<img class="card-img front-gif" src="./assets/card_gif/${this.parameters["card_id"]}.png" alt="./assets/image/fail_loading.svg">`; // 正面gif
-        let front_preview_html = `<img class="card-img front-preview" src="./assets/card_img/${this.parameters["snapshot"]}">` // 正面预览png
+        // console.log (this.parameters["card_id"]);
+        var AVT_tag = this.parameters["AVT_tag"];
+        var VNS_tag = this.parameters["VNS_tag"];
 
-        card_frontImg_node.classList.add("card-frontImg");
-        card_frontImg_node.innerHTML = front_preview_html;
-        // card_frontImg_node.innerHTML = front_gif_html + front_preview_html;
+        if (AVT_tag == 0) {
+            let front_preview_html = `<img class="card-img front-preview" src="./assets/hp_front_preview/front_${num}.png">` // 缺少正面预览png
+            card_frontImg_node.classList.add("card-frontImg");
+            card_frontImg_node.innerHTML = front_preview_html;
+        }
 
+        if (AVT_tag == 1) {
+            if (VNS_tag == "Observations") {
+                let front_preview_html = `<img class="card-img front-preview" src="./assets/hp_front_preview/front_${num}_1.png">`
+                card_frontImg_node.classList.add("card-frontImg");
+                card_frontImg_node.innerHTML = front_preview_html;
+            } else if (VNS_tag == "C5") {
+                let front_preview_html = `<img class="card-img front-preview" src="./assets/hp_front_preview/front_${num}_1.png">`
+                card_frontImg_node.classList.add("card-frontImg");
+                card_frontImg_node.innerHTML = front_preview_html;
+            } else if (VNS_tag == "C3") {
+                let front_preview_html = `<img class="card-img front-preview" src="./assets/hp_front_preview/front_${num}_1.png">`
+                card_frontImg_node.classList.add("card-frontImg");
+                card_frontImg_node.innerHTML = front_preview_html;
+            } else {
+                let front_preview_html = `<img class="card-img front-preview" src="./assets/hp_front_preview/front_${num}.png">` // 缺少正面预览png
+                card_frontImg_node.classList.add("card-frontImg");
+                card_frontImg_node.innerHTML = front_preview_html;
+            }
+
+        }
 
         return card_frontImg_node;
     }
@@ -257,13 +268,18 @@ class Homepage_Card {
         </p>
     </div>
     */
+
+    //卡片的浅色部分
     _createCard_frontBody() {
         let card_body_node = document.createElement("div");
         let card_frontBody_titleHtml = "";
         let card_frontBody_textHtml = "";
         let card_body_front_textArray = [
-            this.parameters["how"]
+            this.parameters["source"],
+            this.parameters["year"],
+            this.parameters["link"]
         ];
+
 
         card_body_node.classList.add("card-body");
 
@@ -271,10 +287,23 @@ class Homepage_Card {
             if (card_body_front_textArray[i] === "") {
                 return;
             }
+            if (i == 0) {
+                card_frontBody_textHtml = `<p class="card-body-text"><b>Source: </b>${card_body_front_textArray[i]}</p>`;
+                card_body_node.innerHTML += (card_frontBody_titleHtml + card_frontBody_textHtml);
+                return;
+            }
+            if (i == 1) {
+                card_frontBody_textHtml = `<p class="card-body-text"><b>Year: </b>${card_body_front_textArray[i]}</p>`;
+                card_body_node.innerHTML += (card_frontBody_titleHtml + card_frontBody_textHtml);
+                return;
+            }
 
-            // card_frontBody_titleHtml = `<div class="card-body-subtitle">${title}</div>`;
-            card_frontBody_textHtml = `<p class="card-body-text">${card_body_front_textArray[i]}</p>`;
-            card_body_node.innerHTML += (card_frontBody_titleHtml + card_frontBody_textHtml);
+            if (i == 2) {
+                card_frontBody_textHtml = `<p class="card-body-text"><b>Link: </b><a classname="caselink" href=${card_body_front_textArray[i]}  target="_blank">URL 🔗</a></p>`;
+                card_body_node.innerHTML += (card_frontBody_titleHtml + card_frontBody_textHtml);
+                return;
+            }
+
         });
 
         return card_body_node;
@@ -294,73 +323,35 @@ class Homepage_Card {
      */
     _createCard_backBody() {
         let card_body_node = document.createElement("div");
-        let card_body_subtitle_effective = `<h6 class="card-body-subtitle"><u>Why effective in triggering likes:</u></h6>`;
-        let card_body_subtitle_ineffective = `<h6 class="card-body-subtitle"><u>Why ineffective in augmenting negative emotions:</u></h6>`;
-        let card_body_effective_node = document.createElement("div");
-        let card_body_ineffective_node = document.createElement("div");
-
-        let effective_item_html = "";
-        let ineffective_item_html = "";
-
-        let effective_valueArr = [
-            this.parameters["effective_1"],
-            this.parameters["effective_2"],
-            this.parameters["effective_3"]
+        let card_body_subtitle_html = `<h6 class="card-body-subtitle"></h6>`;
+        let card_body_caption_node = document.createElement("div");
+        let caption_item_html = "";
+        let caption_valueArr = [
+            // this.parameters["eg_source"], this.parameters["eg_year"], 
+            // this.parameters["eg_category"], this.parameters["eg_subcategory"]
         ];
-
-
-        let ineffective_valueArr = [
-            this.parameters["ineffective_1"],
-            this.parameters["ineffective_2"],
-            this.parameters["ineffective_3"]
-        ];
-
 
         card_body_node.classList.add("card-body");
-        card_body_effective_node.classList.add("card-body-caption");
-        card_body_ineffective_node.classList.add("card-body-caption");
-
+        card_body_caption_node.classList.add("card-body-caption");
 
         Homepage_Card.caption_keyArr.forEach((key, i, keyList) => {
-            if (effective_valueArr[i] === "") {
+            if (caption_valueArr[i] === "") {
                 return;
             }
-            effective_item_html = `<div><span>${key}: </span>${effective_valueArr[i]}</div>`;
-            card_body_effective_node.innerHTML += effective_item_html;
+
+            caption_item_html = ``;
+            card_body_caption_node.innerHTML += caption_item_html;
         });
-
-        //特殊情况，没有ineffective的
-        if (ineffective_valueArr.toString() == ',,') {
-            ineffective_item_html = `<div>no comment in this category :)</div>`;
-            card_body_ineffective_node.innerHTML += ineffective_item_html;
-        }
-
-        Homepage_Card.caption_keyArr.forEach((key, i, keyList) => {
-            if (ineffective_valueArr[i] === "") {
-                return;
-            }
-            ineffective_item_html = `<div><span>${key}: </span>${ineffective_valueArr[i]}</div>`;
-            card_body_ineffective_node.innerHTML += ineffective_item_html;
-        });
-
-
-        card_body_node.innerHTML = card_body_subtitle_effective;
-        card_body_node.appendChild(card_body_effective_node);
-
-        // card_body_node.innerHTML += "<br>" + card_body_subtitle_ineffective;
-        // card_body_node.appendChild(card_body_ineffective_node);
-
+        card_body_node.innerHTML = card_body_subtitle_html;
+        card_body_node.appendChild(card_body_caption_node);
         return card_body_node;
     }
 
 
     _createCard_footer(direction = 1) {
 
-        let source_text = "";
-        let rating_text = "";
-        let rating_star = "";
+        let left_html = "";
         let button_text = "";
-        let index_text = "";
         let card_footer_bottom_html = "";
         let card_footer_bottom_icon_html = "";
         let card_footer_node = document.createElement("div");
@@ -368,37 +359,32 @@ class Homepage_Card {
 
         if (direction > 0) {
             // positive
-            //id编号
-            index_text = `<span class="card-footer-num">NO. ${this.parameters["card_id"]}</span>`;
-            //底部文字：来源
-            source_text = `<span class="card-footer-source">Source of the example: <a href="${this.parameters["eg_url"]}" target="_blank">Link</a></span>`;
-            //底部文字：得分和星星
-            // rating_text = `<span class="card-footer-rating">Effectiveness ratio:  ${this.parameters["rating"]}</span>`;
-            // rating_star = `<div class="star-ratings-sprite"><span style="width:${this.parameters["rating"]}" class="star-ratings-sprite-rating"></span></div>`;
-            //翻转按钮的文字
-            button_text = "View comments";
+            left_html = `<span class="card-footer-num">NO. ${this.parameters["card_id"]}</span>`;
+            button_text = " ";
         } else {
             // negative
-            button_text = "Back to front";
+            left_html = ``;
+            button_text = "";
         }
 
-        card_footer_bottom_html = `<button class="card-footer-bottom">${button_text}</button>`;
+        card_footer_bottom_html = `<div class="card-footer-bottom-chart">${this.parameters["Chart_tag"]}</div>`;
+        card_footer_bottom_icon_html = `<div class="${this.parameters["Chart_tag"].replace(/\s+/g, "-")}"></div>`;
         card_footer_node.classList.add("card-footer");
 
-        card_footer_node.innerHTML = source_text + rating_text + rating_star + index_text + card_footer_bottom_html;
+        card_footer_bottom_node.classList.add("card-footer-child");
 
-        //在卡片底部加icon tag
-        // card_footer_bottom_node.innerHTML = card_footer_bottom_icon_html + card_footer_bottom_html;
+        card_footer_node.innerHTML = left_html;
+        card_footer_bottom_node.innerHTML = card_footer_bottom_icon_html + card_footer_bottom_html;
         // card_footer_node.appendChild(card_footer_bottom_node);
 
         return card_footer_node;
     }
 }
 
-//卡片正面需要的字段
-Homepage_Card.card_body_front_titleArray = ["HOW"];
-//卡片背面需要的字段
-Homepage_Card.caption_keyArr = ["Quote1", "Quote2", "Quote3"];
+
+//这里把card的json传进来了
+Homepage_Card.card_body_front_titleArray = ["HOW", "year", "link"];
+Homepage_Card.caption_keyArr = ["Source", "Year", "Category", "Subcategory"];
 
 Homepage_Card.prototype._bindEvents = function() {
 
@@ -409,64 +395,62 @@ Homepage_Card.prototype._bindEvents = function() {
     const back_trans_button = card_inner_node.querySelector(".back .card-footer-bottom");
     const front_img = card_inner_node.querySelector(".front .card-frontImg");
     // const front_preview_img = this_card_node.querySelector("img.front-preview");
-    //背面的图片，以及放大图片的效果
-    // const back_img_box = this_card_node.querySelector(".card-imgBox");
-    // const back_img_cover = back_img_box.querySelector(".img-cover");
-    // const back_gif_zooming = back_img_cover.querySelector(".img-cover-overlay");
+    const back_img_box = this_card_node.querySelector(".card-imgBox");
+    const back_img_cover = back_img_box.querySelector(".img-cover");
+    const back_gif_zooming = back_img_cover.querySelector(".img-cover-overlay");
     const modal_title_node = document.querySelector(".modal-title");
 
     // card footer button
-    front_trans_button.addEventListener("click", () => {
-        if (!card_inner_node.classList.contains("turned-over")) {
-            card_inner_node.classList.add("turned-over");
-        }
-    });
-    back_trans_button.addEventListener("click", () => {
-        if (card_inner_node.classList.contains("turned-over")) {
-            card_inner_node.classList.remove("turned-over");
-        }
-    });
-
-    // card footer URL 鼠标划过的tooltip
-    // $(card_inner_node.querySelector(".card-footer a")).tooltip({ title: "link to the original work" });
-
-    // front gif static preview 鼠标hover播放gif的效果
-    // front_img.addEventListener("mouseover", () => {
-    //     front_img.querySelector("img.front-gif").style.visibility = "none";
-    //     $(front_img).find("img.front-preview").fadeTo("fast", 0);
-    // });
-    // front_img.addEventListener("mouseout", () => {
-    //     front_img.querySelector("img.front-gif").style.visibility = "block";
-    //     $(front_img).find("img.front-preview").fadeTo("fast", 1);
-    // });
-
-    //背面gif的预览和放大功能
-    // back gif zooming in modal window
-    // $(back_img_box).hover(
-    //     function() {
-    //         $(back_img_cover).fadeTo("fast", 1);
-    //     },
-    //     function() {
-    //         $(back_img_cover).fadeTo("fast", 0);
+    // front_trans_button.addEventListener("click", () => {
+    //     if(!card_inner_node.classList.contains("turned-over")) {
+    //         card_inner_node.classList.add("turned-over");
     //     }
-    // );
-    // modal window
-    // $(back_gif_zooming).tooltip({ title: "zoom in" });
-    // back_gif_zooming.addEventListener("click", () => {
-    //     $('#zooming-modal').modal({
-    //         backdrop: true,
-    //         keyboard: false,
-    //         focus: true,
-    //         show: true
-    //     });
-
-    //     document.querySelector(".modal-body > img").setAttribute("src", `./assets/back_gif_s/${this._back_gif_name}`);
-    //     document.querySelector(".modal-content").classList.add(this.parameters["VNS_tag"]);
-    //     modal_title_node.innerText = this.parameters["eg_title"];
-    //     modal_title_node.setAttribute("href", this.parameters["eg_url"]);
+    // });
+    // back_trans_button.addEventListener("click", () => {
+    //     if(card_inner_node.classList.contains("turned-over")) {
+    //         card_inner_node.classList.remove("turned-over");
+    //     }
     // });
 
+    // card footer URL
+    $(card_inner_node.querySelector(".card-footer a")).tooltip({ title: "watch full video" });
 
+    //鼠标hover的时候，动图gif出现并播放
+    // front gif static preview
+    front_img.addEventListener("mouseover", () => {
+        front_img.querySelector("img.front-gif").style.visibility = "none";
+        $(front_img).find("img.front-preview").fadeTo("fast", 0);
+    });
+    front_img.addEventListener("mouseout", () => {
+        front_img.querySelector("img.front-gif").style.visibility = "block";
+        $(front_img).find("img.front-preview").fadeTo("fast", 1);
+    });
+
+    // back gif zooming in modal window
+    $(back_img_box).hover(
+        function() {
+            $(back_img_cover).fadeTo("fast", 1);
+        },
+        function() {
+            $(back_img_cover).fadeTo("fast", 0);
+        }
+    );
+
+    // modal window
+    $(back_gif_zooming).tooltip({ title: "zoom in" });
+    back_gif_zooming.addEventListener("click", () => {
+        $('#zooming-modal').modal({
+            backdrop: true,
+            keyboard: false,
+            focus: true,
+            show: true
+        });
+
+        document.querySelector(".modal-body > img").setAttribute("src", `./assets/back_gif_s/${this._back_gif_name}`);
+        document.querySelector(".modal-content").classList.add(this.parameters["VNS_tag"]);
+        modal_title_node.innerText = this.parameters["eg_title"];
+        modal_title_node.setAttribute("href", this.parameters["eg_url"]);
+    });
     // $('#zooming-modal').on('show.bs.modal', function() {
     //     let img = new Image();
     //     img.src = `./assets/back_gif_s/${that._back_gif_name}`;
@@ -568,7 +552,7 @@ Homepage_Reminder.prototype._bindEvents = function() {
 
     }
 
-    // event_callback();
+    event_callback();
     // CARD_DISPLAY_NODE.addEventListener("scroll", event_callback);
     CARD_DISPLAY_NODE.parentElement.addEventListener("scroll", event_callback);
 }

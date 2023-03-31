@@ -96,6 +96,7 @@ function navRelocation(name = "") {
     document.querySelector("main").innerHTML = "";
 }
 
+//这里是design methods的操作
 /* page loading methods */
 function openHomepage_ex() {
     // 页面呈现loading
@@ -121,62 +122,62 @@ function openHomepage_ex() {
 
 
 
-function openStudyMaterial() {
-    // 页面呈现loading
-    // document.querySelector("main").innerHTML = "";
+// function openStudyMaterial() {
+//     // 页面呈现loading
+//     // document.querySelector("main").innerHTML = "";
 
-    // 界面异步加载
-    $.ajax({
-        // url: "https://jkalan6991.gitee.io/video-explorer/assets/static/videodataset.html",
-        url: "./assets/static/studymaterial.html",
-        type: "get",
-        contentType: "text/html",
-        dataType: "html",
-        success: function(res) {
-            document.querySelector("main").innerHTML = res;
-            StudyMaterial_loading();
-        }
-    });
-}
+//     // 界面异步加载
+//     $.ajax({
+//         // url: "https://jkalan6991.gitee.io/video-explorer/assets/static/videodataset.html",
+//         url: "./assets/static/studymaterial.html",
+//         type: "get",
+//         contentType: "text/html",
+//         dataType: "html",
+//         success: function(res) {
+//             document.querySelector("main").innerHTML = res;
+//             StudyMaterial_loading();
+//         }
+//     });
+// }
 
-function openVideoDataset() {
-    // 页面呈现loading
-    // document.querySelector("main").innerHTML = "";
+// function openVideoDataset() {
+//     // 页面呈现loading
+//     // document.querySelector("main").innerHTML = "";
 
-    // 界面异步加载
-    $.ajax({
-        // url: "https://jkalan6991.gitee.io/video-explorer/assets/static/videodataset.html",
-        url: "./assets/static/videodataset.html",
-        type: "get",
-        contentType: "text/html",
-        dataType: "html",
-        success: function(res) {
-            document.querySelector("main").innerHTML = res;
-            videoDataset_loading();
-        }
-    });
-}
+//     // 界面异步加载
+//     $.ajax({
+//         // url: "https://jkalan6991.gitee.io/video-explorer/assets/static/videodataset.html",
+//         url: "./assets/static/videodataset.html",
+//         type: "get",
+//         contentType: "text/html",
+//         dataType: "html",
+//         success: function(res) {
+//             document.querySelector("main").innerHTML = res;
+//             videoDataset_loading();
+//         }
+//     });
+// }
 
-function openGalleryDataset() {
-    // 页面呈现loading
-    // document.querySelector("main").innerHTML = "";
+// function openGalleryDataset() {
+//     // 页面呈现loading
+//     // document.querySelector("main").innerHTML = "";
 
-    // 界面异步加载
-    $.ajax({
-        // url: "https://jkalan6991.gitee.io/video-explorer/assets/static/videodataset.html",
-        url: "./assets/static/gallery.html",
-        type: "get",
-        contentType: "text/html",
-        dataType: "html",
-        success: function(res) {
-            document.querySelector("main").innerHTML = res;
-            // videoDataset_loading();
-            gallery_loading();
-        }
-    });
-}
+//     // 界面异步加载
+//     $.ajax({
+//         // url: "https://jkalan6991.gitee.io/video-explorer/assets/static/videodataset.html",
+//         url: "./assets/static/gallery.html",
+//         type: "get",
+//         contentType: "text/html",
+//         dataType: "html",
+//         success: function(res) {
+//             document.querySelector("main").innerHTML = res;
+//             // videoDataset_loading();
+//             gallery_loading();
+//         }
+//     });
+// }
 
-
+//这里是stimuli的操作
 function openDownloads() {
     // 页面呈现loading
     // document.querySelector("main").innerHTML = "";
@@ -195,7 +196,7 @@ function openDownloads() {
     });
 }
 
-
+//这里是corpus页的操作
 function openAbout() {
     // 页面呈现loading
     // document.querySelector("main").innerHTML = "";
@@ -210,7 +211,9 @@ function openAbout() {
         success: function(res) {
             document.querySelector("main").innerHTML = res;
             $("#official-side").tooltip({ title: "learn more about iDVx Lab" });
-            downloads_loading();
+            //downloads_loading();
+
+            Homepage_ex_loading();
         }
     });
 }
@@ -345,6 +348,7 @@ function searchBox_EventListener(card_display_node = new HTMLElement()) {
 
 //跟load卡片有关系，别动
 
+/* gallery应该也不用 */
 // function gallery_loading() {
 //     const video_deck_node = document.querySelector(".video-deck");
 //     const empty_deck_node = document.querySelector("#empty-deck-single");
