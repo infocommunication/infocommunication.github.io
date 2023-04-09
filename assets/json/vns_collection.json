@@ -3,7 +3,7 @@
         "VNS_tag": "C1",
         "VNS_clustername": "C1 · Visual Complexity",
         "VNS_color": "#000000",
-        "VNS_desc": "Using Golden Hook, a data story is started with the Establisher based on readers' personal data or knowledge. This design pattern can only be found at the beginning of the story and is used to help readers quickly understand the topic of a story. It serves as a hook to reveal unexpected findings and increase curiosity. ",
+        "VNS_desc": "Visual Complexity appears on the first level of infographic reading. This category refers to controlling the level of detail or intricacy contained within an infographic to avoid overwhelming readers at first glance.",
         "VNS_num": 3
     },
     {
@@ -11,7 +11,7 @@
         "VNS_tag": "C2",
         "VNS_clustername": "C2 · Visual Rhythm",
         "VNS_color": "#BEBADA",
-        "VNS_desc": "Kaleidoscope is used at the Initial of a data story. This design pattern requires readers' personal data as a supplement to the supporting facts and then presents the data as personalized visualization. It serves the intent of persuading by delivering more convincing arguments backed with data provided by readers.",
+        "VNS_desc": "Visual Rhythm appears on the first level of infographic reading. This category provides a visual treat for the eyes by using repetitive patterns to create a sense of movement, harmony, and unity.",
         "VNS_num": 2
     },
     {
@@ -19,15 +19,15 @@
         "VNS_tag": "C3",
         "VNS_clustername": "C3 · Color Hook",
         "VNS_color": "#FB8072",
-        "VNS_desc": "Simulator uses visualization as the input interface for exploration in the Initial of a data story. Specifically, the visualization models a fact or a theory and exposes parameters that readers can manipulate to change the behavior of the simulation. By making a series of decisions, readers can learn the fact or the theory by ``experiencing'' it themselves. ",
+        "VNS_desc": "Color Hook appears on the first level of infographic reading. This category uses color size, saturation, and hue to capture readers' attention and evoke their feelings and emotions.",
         "VNS_num": 2
     },
     {
         "VNS_id": 3,
         "VNS_tag": "C4",
-        "VNS_clustername": "C4 · Spotlight",
+        "VNS_clustername": "C4 · Figurative Representation",
         "VNS_color": "#c0c96f",
-        "VNS_desc": "Spotlight is applied at the Peak of a data story. With this pattern, the major insight is presented as a visualization, usually in a form of a map. Specifically, the visualization asks for readers' addresses and highlights the data points related to them. It is widely used in data stories around serious topics such as well-being and environment to support readers in relating individual lives to society. ",
+        "VNS_desc": "Figurative Representation appears on the first level of infographic reading. Visual Complexity appears on the first level of infographic reading. This category uses concrete objects such as icons and images to illustrate abstract concepts, encouraging readers to inspect an infographic more closely. ",
         "VNS_num": 3
     },
     {
@@ -35,7 +35,7 @@
         "VNS_tag": "C5",
         "VNS_clustername": "C5 · Information Accessibility",
         "VNS_color": "#f5c8c0",
-        "VNS_desc": "Magic Mirror is used at the Peak of a data story and can produce the most personalized story among all the patterns. Stories combined with it usually take the form of a quiz or a calculator, integrating readers' data or information to deliver a highly customized major insight.  This pattern helps reflect ``who you are'' and more importantly, provides personalized advice to improve one's current situation.",
+        "VNS_desc": "Information Accessibility appears at the second level of infographic reading. This category provides details and explanations to signal the transparency and trustworthiness of information presented in an infographic.",
         "VNS_num": 3
     },
     {
@@ -43,7 +43,7 @@
         "VNS_tag": "C6",
         "VNS_clustername": "C6 · Visual Anchoring",
         "VNS_color": "#f5c8c0",
-        "VNS_desc": "Touchstone helps reveal the major insight in the Peak of a data story by prompting readers to make a guess. Touchstone first asks readers to predict the reality based on their knowledge, and then show the visualization of the actual data against the prediction. In this way, readers are more likely to reflect on the gap and be impressed with the major insight.",
+        "VNS_desc": "Visual Anchoring appears on the second level of infographic reading. This category guides readers to quickly identify areas of interest within an infographic by suggesting a clear information flow.",
         "VNS_num": 4
     },
     {
@@ -51,7 +51,7 @@
         "VNS_tag": "C7",
         "VNS_clustername": "C7 · Color Associations",
         "VNS_color": "#f5c8c0",
-        "VNS_desc": "We also derived two additional findings by observing the distribution of the samples in our corpus, including two vertical clusters and the central axis of our framework. The specific definitions of these observations can be seen in our paper.",
+        "VNS_desc": "Color Associations appears on the second level of infographic reading. This category associates color saturation and hue with specific concepts, ideas, or even emotions, supporting interpreting categorical or numerical data and augmenting visualization reading.",
         "VNS_num": 1
     },
     {
@@ -59,7 +59,7 @@
         "VNS_tag": "C8",
         "VNS_clustername": "C8 · Narrative Voice",
         "VNS_color": "#f5c8c0",
-        "VNS_desc": "We also derived two additional findings by observing the distribution of the samples in our corpus, including two vertical clusters and the central axis of our framework. The specific definitions of these observations can be seen in our paper.",
+        "VNS_desc": "Narrative Voice appears on the third level of infographic reading. This category describes the format through which an infographic is communicated, an intimate narrative voice can help establish a deeper connection between readers and the story delivered by an infographic.",
         "VNS_num": 2
     },
     {
@@ -67,7 +67,7 @@
         "VNS_tag": "C9",
         "VNS_clustername": "C9 · Takeaway Messages",
         "VNS_color": "#f5c8c0",
-        "VNS_desc": "We also derived two additional findings by observing the distribution of the samples in our corpus, including two vertical clusters and the central axis of our framework. The specific definitions of these observations can be seen in our paper.",
+        "VNS_desc": "Takeaway Messages appears on the third level of infographic reading. This category emphasizes the main idea or key message of an infographic to promote self-reflection and a call to action.",
         "VNS_num": 3
     }
 ]

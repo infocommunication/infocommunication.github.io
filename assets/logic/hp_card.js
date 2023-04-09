@@ -24,10 +24,10 @@ class Homepage_Card {
         rating,
         effective_1,
         effective_2,
-        effective_3,
+
         ineffective_1,
         ineffective_2,
-        ineffective_3
+
     }) {
         this.parameters = {};
         this.parameters = parameters;
@@ -304,15 +304,13 @@ class Homepage_Card {
 
         let effective_valueArr = [
             this.parameters["effective_1"],
-            this.parameters["effective_2"],
-            this.parameters["effective_3"]
+            this.parameters["effective_2"]
         ];
 
 
         let ineffective_valueArr = [
             this.parameters["ineffective_1"],
-            this.parameters["ineffective_2"],
-            this.parameters["ineffective_3"]
+            this.parameters["ineffective_2"]
         ];
 
 
@@ -398,7 +396,7 @@ class Homepage_Card {
 //卡片正面需要的字段
 Homepage_Card.card_body_front_titleArray = ["HOW"];
 //卡片背面需要的字段
-Homepage_Card.caption_keyArr = ["Quote1", "Quote2", "Quote3"];
+Homepage_Card.caption_keyArr = ["Quote1", "Quote2"];
 
 Homepage_Card.prototype._bindEvents = function() {
 

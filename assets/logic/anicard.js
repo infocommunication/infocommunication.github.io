@@ -3,8 +3,8 @@ import { MNav, Collapse_Btn } from './hp_mobileNav.js';
 import { init_card_display } from './hp_middle.js';
 import { VideoData_Card } from './video_dataset.js';
 import { downloads_loading } from './downloads.js';
-
-import { StudyMaterial_Card } from './study_material.js';
+import { Corpus_Card } from './corpus.js';
+// import { StudyMaterial_Card } from './study_material.js';
 
 const VISITED_PAGE_ARR = [];
 const VISIT_PAGE = function(page_name = "", callback) {
@@ -185,7 +185,7 @@ function openDownloads() {
     // 界面异步加载
     $.ajax({
         // url: "https://jkalan6991.gitee.io/video-explorer/assets/static/downloads.html",
-        url: "./assets/static/downloads.html",
+        url: "./assets/static/about.html",
         type: "get",
         contentType: "text/html",
         dataType: "html",
@@ -204,16 +204,16 @@ function openAbout() {
     // 界面异步加载
     $.ajax({
         // url: "https://jkalan6991.gitee.io/video-explorer/assets/static/about.html",
-        url: "./assets/static/about.html",
+        url: "./assets/static/corpus.html",
         type: "get",
         contentType: "text/html",
         dataType: "html",
         success: function(res) {
             document.querySelector("main").innerHTML = res;
-            $("#official-side").tooltip({ title: "learn more about iDVx Lab" });
+            // $("#official-side").tooltip({ title: "learn more about iDVx Lab" });
             //downloads_loading();
-
-            Homepage_ex_loading();
+            Corpus_loading();
+            // Homepage_ex_loading();
         }
     });
 }
@@ -265,11 +265,45 @@ function Homepage_ex_loading() {
         var chart_child_that_node = chart_child_node[3];
         console.log(chart_child_that_node);
 
-        chart_child_that_node.insertAdjacentHTML('afterend', '<h3 class="sidebar-panel-title sidebar-panel-title-editorial">Output</h3>');
+        chart_child_that_node.insertAdjacentHTML('afterend', '<h3 class="sidebar-panel-title sidebar-panel-title-editorial">1</h3>');
 
     }, 100);
 
 
+}
+
+const corpus_url = "./assets/json/corpus.json";
+
+function Corpus_loading() {
+    const deck_node = document.querySelector(".story-deck");
+    const piece1_deck_node = document.querySelector("#piece1");
+
+    $.getJSON(corpus_url, json => {
+
+        // console.log("Cards loading ......");
+
+        $.each(json, (i, story_item) => {
+            // create card object
+            let {
+                id,
+                title,
+                year,
+                video_source,
+                video_link,
+                emotion
+            } = story_item;
+
+            // insert card object to the deck
+            let vd_object = new Corpus_Card(story_item);
+            vd_object.appendTo(deck_node, piece1_deck_node);
+
+            if (i === json.length - 1) {
+                // console.log("All cards were loaded on the page.");
+            }
+        });
+    });
+
+    // mouse_EventListener();
 }
 
 /*搜索相关*/
@@ -302,13 +336,13 @@ function searchBox_EventListener(card_display_node = new HTMLElement()) {
 }
 
 /* 应该是kinecticharts的 */
-// function modal_EventListener() {
-//     const modal_content_node = document.querySelector(".modal-content");
-//     $('#zooming-modal').on('hidden.bs.modal', function() {
-//         modal_content_node.className = "modal-content";
-//     });
-//     $('.modal-title').tooltip({ title: "visit the data video" });
-// }
+function modal_EventListener() {
+    const modal_content_node = document.querySelector(".modal-content");
+    $('#zooming-modal').on('hidden.bs.modal', function() {
+        modal_content_node.className = "modal-content";
+    });
+    $('.modal-title').tooltip({ title: "visit the data video" });
+}
 
 
 /* video dataset page init method */
