@@ -446,7 +446,7 @@
 }
 
 .story-deck .card-img-top {
-    background-image: url(../image/loading.svg);
+    /* background-image: url(../image/loading.svg);*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -1098,7 +1098,7 @@ footer .footer-text {
 
 .card-img-top .gifImg,
 .card-img-top .preview {
-    object-fit: cover;
+    object-fit: scale-down;
     vertical-align: middle;
     margin: 0 auto;
     width: 100%;
