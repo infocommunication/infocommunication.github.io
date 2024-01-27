@@ -1,0 +1,73 @@
+[{
+        "VNS_id": 0,
+        "VNS_tag": "C1",
+        "VNS_clustername": "C1 · Visual Complexity",
+        "VNS_color": "#000000",
+        "VNS_desc": "Visual Complexity appears at the first level of infographic reading. This category refers to controlling the level of detail or intricacy contained within an infographic to avoid overwhelming readers at first glance.",
+        "VNS_num": 3
+    },
+    {
+        "VNS_id": 1,
+        "VNS_tag": "C2",
+        "VNS_clustername": "C2 · Visual Rhythm",
+        "VNS_color": "#BEBADA",
+        "VNS_desc": "Visual Rhythm appears at the first level of infographic reading. This category provides a visual treat for the eyes by using repetitive patterns to create a sense of movement, harmony, and unity.",
+        "VNS_num": 2
+    },
+    {
+        "VNS_id": 2,
+        "VNS_tag": "C3",
+        "VNS_clustername": "C3 · Color Hook",
+        "VNS_color": "#FB8072",
+        "VNS_desc": "Color Hook appears at the first level of infographic reading. This category uses color size, saturation, and hue to capture readers' attention and evoke their feelings and emotions.",
+        "VNS_num": 2
+    },
+    {
+        "VNS_id": 3,
+        "VNS_tag": "C4",
+        "VNS_clustername": "C4 · Figurative Representation",
+        "VNS_color": "#c0c96f",
+        "VNS_desc": "Figurative Representation appears at the first level of infographic reading. Visual Complexity appears on the first level of infographic reading. This category uses concrete objects such as icons and images to illustrate abstract concepts, encouraging readers to inspect an infographic more closely. ",
+        "VNS_num": 3
+    },
+    {
+        "VNS_id": 4,
+        "VNS_tag": "C5",
+        "VNS_clustername": "C5 · Information Accessibility",
+        "VNS_color": "#f5c8c0",
+        "VNS_desc": "Information Accessibility appears at the second level of infographic reading. This category provides details and explanations to signal the transparency and trustworthiness of information presented in an infographic.",
+        "VNS_num": 3
+    },
+    {
+        "VNS_id": 5,
+        "VNS_tag": "C6",
+        "VNS_clustername": "C6 · Visual Anchoring",
+        "VNS_color": "#f5c8c0",
+        "VNS_desc": "Visual Anchoring appears at the second level of infographic reading. This category guides readers to quickly identify areas of interest within an infographic by suggesting a clear information flow.",
+        "VNS_num": 4
+    },
+    {
+        "VNS_id": 6,
+        "VNS_tag": "C7",
+        "VNS_clustername": "C7 · Color Associations",
+        "VNS_color": "#f5c8c0",
+        "VNS_desc": "Color Associations appears at the second level of infographic reading. This category associates color saturation and hue with specific concepts, ideas, or even emotions, supporting interpreting categorical or numerical data and augmenting visualization reading.",
+        "VNS_num": 1
+    },
+    {
+        "VNS_id": 7,
+        "VNS_tag": "C8",
+        "VNS_clustername": "C8 · Narrative Voice",
+        "VNS_color": "#f5c8c0",
+        "VNS_desc": "Narrative Voice appears at the third level of infographic reading. This category describes the format through which an infographic is communicated, an intimate narrative voice can help establish a deeper connection between readers and the story delivered by an infographic.",
+        "VNS_num": 2
+    },
+    {
+        "VNS_id": 7,
+        "VNS_tag": "C9",
+        "VNS_clustername": "C9 · Takeaway Messages",
+        "VNS_color": "#f5c8c0",
+        "VNS_desc": "Takeaway Messages appears at the third level of infographic reading. This category emphasizes the main idea or key message of an infographic to promote self-reflection and a call to action.",
+        "VNS_num": 3
+    }
+]
